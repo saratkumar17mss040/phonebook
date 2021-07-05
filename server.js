@@ -26,6 +26,12 @@ let phonebook = [
 	},
 ];
 
+const unknownEndpoint = (request, response) => {
+	response.status(404).send({
+		error: 'unknown endpoint',
+	});
+};
+
 const PORT = process.env.PORT || 3002;
 
 // Middlewares
@@ -117,6 +123,8 @@ app.delete('/api/persons/:id', (request, response) => {
 		response.status(404).end();
 	}
 });
+
+app.use(unknownEndpoint);
 
 app.listen(PORT, () => {
 	console.log(`Server is up and ⚡ running on port ${PORT}`);
