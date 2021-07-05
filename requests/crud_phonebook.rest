@@ -1,0 +1,66 @@
+# ENDPOINTS - LOCAL AND GLOBAL
+
+# BASE ROUTE
+GET http://localhost:3002
+
+###
+
+GET https://phonebook-node-application.herokuapp.com
+
+### 
+
+# READ NUMBER OF PERSONS ON THE PHONEBOOK
+GET http://localhost:3002/info
+
+###
+
+GET https://phonebook-node-application.herokuapp.com/info
+
+###
+
+# READ ALL PERSONS PHONEBOOK INFO
+GET http://localhost:3002/api/persons
+
+###
+
+GET https://phonebook-node-application.herokuapp.com/api/persons
+
+###
+
+# READ A PERSON'S PHONEBOOK INFO BY ID
+GET http://localhost:3002/api/persons/4
+
+###
+
+GET https://phonebook-node-application.herokuapp.com/api/persons/4
+
+###
+
+# CREATE A PERSON'S PHONEBOOK
+POST http://localhost:3002/api/persons
+Content-Type: application/json
+
+{
+    "name": "Samson",
+    "number": 8754080288
+}
+
+###
+
+POST  https://phonebook-node-application.herokuapp.com/api/persons
+Content-Type: application/json
+
+{
+    "name": "Samson",
+    "number": 8754080288
+}
+
+###
+
+# DELETE PERSON'S PHONEBOOK INFO BY ID
+DELETE  http://localhost:3002/api/persons/4
+
+###
+
+DELETE  https://phonebook-node-application.herokuapp.com/api/persons/4
+
